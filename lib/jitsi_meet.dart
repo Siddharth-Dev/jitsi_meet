@@ -30,8 +30,8 @@ class JitsiMeet {
     assert(options.room != null, "room is null");
     assert(options.room.trim().isNotEmpty, "room is empty");
     assert(options.room.trim().length >= 3, "Minimum room length is 3");
-    assert(_allowCharsForRoom.hasMatch(options.room),
-        "Only alphanumeric, dash, and underscore chars allowed");
+//    assert(_allowCharsForRoom.hasMatch(options.room),
+//        "Only alphanumeric, dash, and underscore chars allowed");
 
     // Validate serverURL is absolute if it is not null or empty
     if (options.serverURL?.isNotEmpty ?? false) {
@@ -43,7 +43,9 @@ class JitsiMeet {
     if (listener != null) {
       String serverURL = options.serverURL ?? "https://meet.jit.si";
       String key;
-      if (serverURL.endsWith("/")) {
+      if (options.room.contains("://")) {
+        key = options.room;
+      } else if (serverURL.endsWith("/")) {
         key = serverURL + options.room;
       } else {
         key = serverURL + "/" + options.room;
