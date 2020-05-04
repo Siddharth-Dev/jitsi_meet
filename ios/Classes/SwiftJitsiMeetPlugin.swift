@@ -95,6 +95,7 @@ public class SwiftJitsiMeetPlugin: NSObject, FlutterPlugin, FlutterStreamHandler
             // jitsiViewController?.videoMuted = call.arguments?["videoMuted"] as? Bool;
             
             let navigationController = UINavigationController(rootViewController: (jitsiViewController)!)
+            navigationController.navigationBar.isHidden = true
             navigationController.modalPresentationStyle = .fullScreen
             self.uiVC.present(navigationController, animated: true)
             
