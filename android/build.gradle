@@ -6,6 +6,7 @@ buildscript {
     repositories {
         google()
         jcenter()
+//        mavenLocal()
     }
 
     dependencies {
@@ -19,6 +20,15 @@ rootProject.allprojects {
         maven {
             url "https://github.com/jitsi/jitsi-maven-repository/raw/master/releases"
         }
+//        mavenLocal()
+//        maven {
+//            name = "GitHubPackages"
+//            url = uri("https://maven.pkg.github.com/jiomedia/jitsi-sdk")
+//            credentials {
+//                username = "jiomedia"
+//                password = "cd5ff88877fcfd74065801f3f624522893b46f1d"   // read token
+//            }
+//        }
         google()
         jcenter()
     }
@@ -46,4 +56,5 @@ dependencies {
 
     // Jitsi Meet
     implementation ('org.jitsi.react:jitsi-meet-sdk:2.5.1') { transitive = true }
+//    implementation ('com.jio-jitsi:jitsi-meet-sdk:2.8.2') { transitive = true }
 }
