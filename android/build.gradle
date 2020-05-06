@@ -26,7 +26,7 @@ rootProject.allprojects {
             url = uri("https://maven.pkg.github.com/jiomedia/jitsi-sdk")
             credentials {
                 username = "jiomedia"
-                password = "e841e9229ec216fb0bf3c8c473571cdb3fe69524"   // read token
+                password = "09679ca778e26edeec11f0f6909d632c5d12a73e"   // read token
             }
         }
         google()
@@ -56,5 +56,5 @@ dependencies {
 
     // Jitsi Meet
 //    implementation ('org.jitsi.react:jitsi-meet-sdk:2.5.1') { transitive = true }
-    implementation ('com.jio-jitsi:jitsi-meet-sdk:2.8.4') { transitive = true }
+    implementation ('com.jio-jitsi:jitsi-meet-sdk:2.8.5') { transitive = true }
 }
