@@ -55,6 +55,6 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     // Jitsi Meet
-//    implementation ('org.jitsi.react:jitsi-meet-sdk:2.5.1') { transitive = true }
-    implementation ('com.jio-jitsi:jitsi-meet-sdk:2.8.5') { transitive = true }
+    implementation ('org.jitsi.react:jitsi-meet-sdk:2.5.1') { transitive = true }
+//    implementation ('com.jio-jitsi:jitsi-meet-sdk:2.8.5') { transitive = true }
 }
